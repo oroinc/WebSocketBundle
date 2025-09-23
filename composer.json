@@ -1,7 +1,7 @@
 {
-    "name": "gos/web-socket-bundle",
+    "name": "oroinc/web-socket-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony Web Socket Bundle",
+    "description": "A fork of Symfony Web Socket Bundle that enables PHP 8.4 and Symfony 7 support",
     "keywords": ["Web Socket Bundle", "Websocket", "WAMP", "IO", "Ratchet"],
     "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
     "license": "MIT",
