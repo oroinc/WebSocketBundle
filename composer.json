@@ -1,7 +1,7 @@
 {
-    "name": "gos/web-socket-bundle",
+    "name": "oroinc/web-socket-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony Web Socket Bundle",
+    "description": "A fork of Symfony Web Socket Bundle that enables PHP 8.4 and Symfony 7 support",
     "keywords": ["Web Socket Bundle", "Websocket", "WAMP", "IO", "Ratchet"],
     "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
     "license": "MIT",
@@ -16,21 +16,21 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.4",
         "cboden/ratchet": "^0.5",
-        "gos/pubsub-router-bundle": "^2.2 || ^3.0",
+        "oroinc/pubsub-router-bundle": "dev-3.1.x",
         "psr/log": "^1.1 || ^2.0 || ^3.0",
         "react/event-loop": "^1.2",
         "react/socket": "^1.9",
-        "symfony/config": "^5.4 || ^6.0",
-        "symfony/console": "^5.4 || ^6.0",
-        "symfony/dependency-injection": "^5.4 || ^6.0",
+        "symfony/config": "^6.0 || ^7.0",
+        "symfony/console": "^6.0 || ^7.0",
+        "symfony/dependency-injection": "^6.0 || ^7.0",
         "symfony/deprecation-contracts": "^2.1 || ^3.0",
-        "symfony/event-dispatcher": "^5.4 || ^6.0",
-        "symfony/http-foundation": "^5.4 || ^6.0",
-        "symfony/http-kernel": "^5.4 || ^6.0",
-        "symfony/security-core": "^5.4 || ^6.0",
-        "symfony/string": "^5.4 || ^6.0"
+        "symfony/event-dispatcher": "^6.0 || ^7.0",
+        "symfony/http-foundation": "^6.0 || ^7.0",
+        "symfony/http-kernel": "^6.0 || ^7.0",
+        "symfony/security-core": "^6.0 || ^7.0",
+        "symfony/string": "^6.0 || ^7.0"
     },
     "require-dev": {
         "doctrine/dbal": "^3.3",
@@ -40,9 +40,9 @@
         "phpstan/phpstan-phpunit": "1.1.1",
         "phpstan/phpstan-symfony": "1.2.13",
         "phpunit/phpunit": "^9.5",
-        "symfony/cache": "^5.4 || ^6.0",
-        "symfony/phpunit-bridge": "^5.4 || ^6.0",
-        "symfony/twig-bundle": "^5.4 || ^6.0"
+        "symfony/cache": "^6.0 || ^7.0",
+        "symfony/phpunit-bridge": "^6.0 || ^7.0",
+        "symfony/twig-bundle": "^6.0 || ^7.0"
     },
     "conflict": {
         "doctrine/dbal": "<3.3",
