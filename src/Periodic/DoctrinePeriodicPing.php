@@ -31,16 +31,6 @@ final class DoctrinePeriodicPing implements PeriodicInterface, LoggerAwareInterf
             throw new \InvalidArgumentException(sprintf('The connection must be a subclass of %s or implement %s, %s does not fulfill these requirements.', Connection::class, PingableConnection::class, \get_class($connection)));
         }
 
-        if ($connection instanceof PingableConnection && !($connection instanceof Connection)) {
-            trigger_deprecation(
-                'gos/web-socket-bundle',
-                '3.3',
-                'Support for "%s" instances which are not an instance of "%s" is deprecated and will be removed in 4.0.',
-                PingableConnection::class,
-                Connection::class
-            );
-        }
-
         $this->connection = $connection;
         $this->interval = $interval;
     }
@@ -87,15 +77,11 @@ final class DoctrinePeriodicPing implements PeriodicInterface, LoggerAwareInterf
      */
     public function getTimeout(): int
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.9', '%s() is deprecated and will be removed in 4.0, call %s::getInterval() instead.', __METHOD__, self::class);
-
         return $this->getInterval();
     }
 
     public function setTimeout(int $timeout): void
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.9', '%s() is deprecated and will be removed in 4.0, set the timeout through the constructor instead.', __METHOD__);
-
         $this->interval = $timeout;
     }
 }
