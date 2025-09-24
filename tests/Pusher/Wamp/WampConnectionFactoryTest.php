@@ -3,7 +3,7 @@
 namespace Gos\Bundle\WebSocketBundle\Tests\Pusher\Wamp;
 
 use Gos\Bundle\WebSocketBundle\Pusher\Wamp\WampConnectionFactory;
-use Gos\Component\WebSocketClient\Wamp\ClientInterface;
+use Gos\Bundle\WebSocketBundle\Wamp\ClientInterface;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\OptionsResolver\Exception\InvalidOptionsException;
 use Symfony\Component\OptionsResolver\Exception\MissingOptionsException;

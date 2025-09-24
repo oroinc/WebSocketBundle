@@ -5,7 +5,7 @@ namespace Gos\Bundle\WebSocketBundle\Pusher\Wamp;
 use Gos\Bundle\WebSocketBundle\Pusher\AbstractPusher;
 use Gos\Bundle\WebSocketBundle\Pusher\Message;
 use Gos\Bundle\WebSocketBundle\Router\WampRouter;
-use Gos\Component\WebSocketClient\Wamp\ClientInterface;
+use Gos\Bundle\WebSocketBundle\Wamp\ClientInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 
 trigger_deprecation('gos/web-socket-bundle', '3.1', 'The "%s" class is deprecated and will be removed in 4.0, use the symfony/messenger component instead.', WampPusher::class);
