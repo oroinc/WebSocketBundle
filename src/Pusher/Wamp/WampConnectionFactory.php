@@ -2,9 +2,9 @@
 
 namespace Gos\Bundle\WebSocketBundle\Pusher\Wamp;
 
-use Gos\Bundle\WebSocketBundle\Wamp\Client;
-use Gos\Bundle\WebSocketBundle\Wamp\ClientFactory;
-use Gos\Bundle\WebSocketBundle\Wamp\ClientInterface;
+use Gos\Component\WebSocketClient\Wamp\Client;
+use Gos\Component\WebSocketClient\Wamp\ClientFactory;
+use Gos\Component\WebSocketClient\Wamp\ClientInterface;
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 use Symfony\Component\OptionsResolver\OptionsResolver;

@@ -6,7 +6,7 @@ use Gos\Bundle\PubSubRouterBundle\Router\RouterInterface;
 use Gos\Bundle\WebSocketBundle\Pusher\Wamp\WampConnectionFactoryInterface;
 use Gos\Bundle\WebSocketBundle\Pusher\Wamp\WampPusher;
 use Gos\Bundle\WebSocketBundle\Router\WampRouter;
-use Gos\Bundle\WebSocketBundle\Wamp\ClientInterface;
+use Gos\Component\WebSocketClient\Wamp\ClientInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\SerializerInterface;
