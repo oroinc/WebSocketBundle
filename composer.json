@@ -64,7 +64,10 @@
         "twig/twig": "<1.36 || >=2.0,<2.6"
     },
     "autoload": {
-        "psr-4": { "Gos\\Bundle\\WebSocketBundle\\": "src/" }
+        "psr-4": {
+            "Gos\\Bundle\\WebSocketBundle\\": "src/",
+            "Gos\\Component\\WebSocketClient\\": "src/Component/WebSocketClient/"
+        }
     },
     "autoload-dev": {
         "psr-4": { "Gos\\Bundle\\WebSocketBundle\\Tests\\": "tests/" }
