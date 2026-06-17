@@ -6,10 +6,8 @@ use Ratchet\ConnectionInterface;
 use ReturnTypeWillChange;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 
-trigger_deprecation('gos/web-socket-bundle', '3.11', 'The "%s" class is deprecated and will be removed in 4.0, use the new websocket authentication API instead.', ClientConnection::class);
-
 /**
- * @deprecated to be removed in 4.0, use the new websocket authentication API instead
+ * deprecated to be removed in 4.0, use the new websocket authentication API instead
  */
 final class ClientConnection implements \ArrayAccess
 {
@@ -37,8 +35,6 @@ final class ClientConnection implements \ArrayAccess
      */
     public function offsetExists($offset): bool
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.0', 'Accessing properties from %s as an array is deprecated and will be removed in 4.0, use the getters to access the properties.', self::class);
-
         return \in_array($offset, ['client', 'connection'], true);
     }
 
@@ -50,8 +46,6 @@ final class ClientConnection implements \ArrayAccess
     #[ReturnTypeWillChange]
     public function offsetGet($offset)
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.0', 'Accessing properties from %s as an array is deprecated and will be removed in 4.0, use the getters to access the properties.', self::class);
-
         switch ($offset) {
             case 'client':
                 return $this->client;

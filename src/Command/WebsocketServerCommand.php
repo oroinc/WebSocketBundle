@@ -34,10 +34,6 @@ final class WebsocketServerCommand extends Command
     {
         parent::__construct();
 
-        if (null === $serverRegistry) {
-            trigger_deprecation('gos/web-socket-bundle', '3.12', 'Not passing the "%s" to the "%s" constructor is deprecated and will be required as of 4.0.', ServerRegistry::class, self::class);
-        }
-
         $this->serverLauncher = $entryPoint;
         $this->port = $port;
         $this->host = $host;
