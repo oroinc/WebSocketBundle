@@ -47,8 +47,6 @@ final class TopicDispatcher implements TopicDispatcherInterface, LoggerAwareInte
         $this->topicRegistry = $topicRegistry;
 
         if ($router instanceof WampRouter) {
-            trigger_deprecation('gos/web-socket-bundle', '3.13', 'Passing a "%s" instance as the second argument of the "%s" class constructor is deprecated and will not be supported in 4.0.', WampRouter::class, self::class);
-
             if (!$topicPeriodicTimer instanceof TopicPeriodicTimer) {
                 throw new \InvalidArgumentException(sprintf('Argument 3 of the %s constructor must be an instance of %s, "%s" given.', self::class, TopicPeriodicTimer::class, get_debug_type($topicPeriodicTimer)));
             }
@@ -85,8 +83,6 @@ final class TopicDispatcher implements TopicDispatcherInterface, LoggerAwareInte
      */
     public function onPush(WampRequest $request, $data, string $provider): void
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.7', '%s() is deprecated and will be removed in 4.0, use the symfony/messenger component instead.', __METHOD__);
-
         $topic = $this->topicManager->getTopic($request->getMatched());
         $this->dispatch(self::PUSH, null, $topic, $request, $data, null, null, $provider);
     }

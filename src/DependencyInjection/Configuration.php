@@ -113,7 +113,7 @@ final class Configuration implements ConfigurationInterface
                     ->validate()
                         ->ifTrue(static fn (bool $enableAuthenticator): bool => !$enableAuthenticator)
                         ->then(static function (bool $enableAuthenticator): void {
-                            trigger_deprecation('gos/web-socket-bundle', '3.11', 'Not setting the "gos_web_socket.authentication.enable_authenticator" config option to true is deprecated.');
+                            // Deprecated: trigger_deprecation removed
                         })
                     ->end()
                 ->end()

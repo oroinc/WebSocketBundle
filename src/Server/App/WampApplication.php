@@ -100,8 +100,6 @@ class WampApplication implements PushableWampServerInterface, LoggerAwareInterfa
      */
     public function onPush(WampRequest $request, $data, $provider): void
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.7', '%s() is deprecated and will be removed in 4.0, use the symfony/messenger component instead.', __METHOD__);
-
         if (null !== $this->logger) {
             $this->logger->info(
                 sprintf('Pusher %s has pushed', $provider),

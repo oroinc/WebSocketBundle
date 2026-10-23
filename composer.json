@@ -1,7 +1,7 @@
 {
-    "name": "gos/web-socket-bundle",
+    "name": "oroinc/web-socket-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony Web Socket Bundle",
+    "description": "A fork of Symfony Web Socket Bundle that enables PHP 8.4 and Symfony 7 support",
     "keywords": ["Web Socket Bundle", "Websocket", "WAMP", "IO", "Ratchet"],
     "homepage": "https://github.com/GeniusesOfSymfony/WebSocketBundle",
     "license": "MIT",
@@ -16,25 +16,24 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
-        "cboden/ratchet": "^0.4.4",
-        "gos/pubsub-router-bundle": "^2.2",
-        "gos/websocket-client": "^1.1",
+        "php": "^8.4",
+        "cboden/ratchet": "^0.4",
+        "oroinc/pubsub-router-bundle": "~2.9",
         "psr/log": "^1.1 || ^2.0 || ^3.0",
         "react/event-loop": "^1.2",
         "react/socket": "^1.9",
-        "symfony/config": "^4.4 || ^5.4 || ^6.0",
-        "symfony/console": "^4.4 || ^5.4 || ^6.0",
-        "symfony/dependency-injection": "^4.4 || ^5.4 || ^6.0",
+        "symfony/config": "^6.0 || ^7.0",
+        "symfony/console": "^6.0 || ^7.0",
+        "symfony/dependency-injection": "^6.0 || ^7.0",
         "symfony/deprecation-contracts": "^2.1 || ^3.0",
-        "symfony/event-dispatcher": "^4.4 || ^5.4 || ^6.0",
-        "symfony/http-foundation": "^4.4 || ^5.4 || ^6.0",
-        "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0",
+        "symfony/event-dispatcher": "^6.0 || ^7.0",
+        "symfony/http-foundation": "^6.0 || ^7.0",
+        "symfony/http-kernel": "^6.0 || ^7.0",
         "symfony/polyfill-php80": "^1.15",
-        "symfony/security-core": "^4.4 || ^5.4 || ^6.0",
-        "symfony/serializer": "^4.4 || ^5.4 || ^6.0",
-        "symfony/string": "^5.4 || ^6.0",
-        "symfony/yaml": "^4.4 || ^5.4 || ^6.0"
+        "symfony/security-core": "^6.0 || ^7.0",
+        "symfony/serializer": "^6.0 || ^7.0",
+        "symfony/string": "^6.0 || ^7.0",
+        "symfony/yaml": "^6.0 || ^7.0"
     },
     "require-dev": {
         "doctrine/cache": "^1.11 || ^2.0",
@@ -45,12 +44,12 @@
         "phpstan/phpstan-phpunit": "1.1.1",
         "phpstan/phpstan-symfony": "1.2.13",
         "phpunit/phpunit": "^9.5",
-        "symfony/cache": "^4.4 || ^5.4 || ^6.0",
-        "symfony/options-resolver": "^4.4 || ^5.4 || ^6.0",
-        "symfony/phpunit-bridge": "^5.4 || ^6.0",
-        "symfony/stopwatch": "^4.4 || ^5.4 || ^6.0",
-        "symfony/twig-bundle": "^4.4 || ^5.4 || ^6.0",
-        "symfony/web-profiler-bundle": "^4.4 || ^5.4 || ^6.0"
+        "symfony/cache": "^6.0 || ^7.0",
+        "symfony/options-resolver": "^6.0 || ^7.0",
+        "symfony/phpunit-bridge": "^6.0 || ^7.0",
+        "symfony/stopwatch": "^6.0 || ^7.0",
+        "symfony/twig-bundle": "^6.0 || ^7.0",
+        "symfony/web-profiler-bundle": "^6.0 || ^7.0"
     },
     "conflict": {
         "doctrine/cache": "<1.11",
@@ -65,7 +64,10 @@
         "twig/twig": "<1.36 || >=2.0,<2.6"
     },
     "autoload": {
-        "psr-4": { "Gos\\Bundle\\WebSocketBundle\\": "src/" }
+        "psr-4": {
+            "Gos\\Bundle\\WebSocketBundle\\": "src/",
+            "Gos\\Component\\WebSocketClient\\": "src/Component/WebSocketClient/"
+        }
     },
     "autoload-dev": {
         "psr-4": { "Gos\\Bundle\\WebSocketBundle\\Tests\\": "tests/" }

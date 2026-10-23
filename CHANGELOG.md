@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.16.2
+
+- Fix `Gos\Bundle\WebSocketBundle\Topic\TopicPeriodicTimer::clearPeriodicTimer()` failing with an undefined array key error when the topic has no registered periodic timers
+
 ## 3.15.0 (2022-09-20)
 
 - Fix deprecated command configuration for Symfony 6.1

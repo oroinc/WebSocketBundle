@@ -26,8 +26,6 @@ final class PeriodicMemoryUsage implements PeriodicInterface, LoggerAwareInterfa
      */
     public function getTimeout(): int
     {
-        trigger_deprecation('gos/web-socket-bundle', '3.9', '%s() is deprecated and will be removed in 4.0, call %s::getInterval() instead.', __METHOD__, self::class);
-
         return $this->getInterval();
     }
 }
